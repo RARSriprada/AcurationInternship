@@ -5,8 +5,8 @@ import re
 import pymupdf as fitz
 from pathlib import Path
 
-
-PDF_PATH = Path(r"C:/Users/venka/Downloads/Report.pdf")
+#Replace with ur file name
+PDF_PATH = Path(r"")
 
 def extract_text(path: Path) -> str:
 
@@ -38,7 +38,7 @@ def get_output_path(pdf_path: Path) -> Path:
     return pdf_path.with_suffix(".txt")
 
 def save_to_txt(text: str, txt_path: Path):
-    #Save the cleaned text into a UTF‑8 encoded .txt file.
+    #Save the cleaned text into a UTF‑8 encoded .txt file ,this can save ur txt file with same name as pdf name.
     with open(txt_path, "w", encoding="utf-8") as f:
         f.write(text)
 
