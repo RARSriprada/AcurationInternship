@@ -41,4 +41,46 @@ python PdfParsing.py
 You’ll get console output like:
 
 Page count: 5
-✅ Cleaned text saved to: EPAM_JD - Intern+FTE - 2026.txt
+ Cleaned text saved to: EPAM_JD - Intern+FTE - 2026.txt
+
+
+
+
+
+
+ Parser.py :It just has 2 added  fuctions(`txt_to_json`,`advanced_json_format`) to pdfParsing.py
+This script extracts text from a PDF, cleans it, and converts it into JSON using:
+- `txt_to_json`: Basic key-value conversion
+- `advanced_json_format`: Structured, section-wise JSON
+
+Set your PDF path in PDF_PATH.
+
+Run:
+python script.py
+
+
+Output:
+
+Cleaned .txt file
+
+Two JSON outputs printed:
+
+Basic key-value
+
+Advanced structured format
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
