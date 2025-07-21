@@ -1,4 +1,5 @@
 # AcurationInternship
+# Day3
 PDF → Text Converter with OCR Support
 What It Does
 Reads a PDF file and prints the page count.
@@ -47,8 +48,8 @@ Page count: 5
 
 
 
-
- Parser.py :It just has 2 added  fuctions(`txt_to_json`,`advanced_json_format`) to pdfParsing.py
+# Day4
+--> Parser.py :It just has 2 added  fuctions(`txt_to_json`,`advanced_json_format`) to pdfParsing.py
 This script extracts text from a PDF, cleans it, and converts it into JSON using:
 - `txt_to_json`: Basic key-value conversion
 - `advanced_json_format`: Structured, section-wise JSON
