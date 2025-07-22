@@ -1,87 +1,65 @@
-# AcurationInternship
-# Day3
-PDF → Text Converter with OCR Support
-What It Does
-Reads a PDF file and prints the page count.
+# Acuration Internship
 
-Extracts readable text using PyMuPDF.
+## Day 3 — PDF → Text Converter with OCR Support
 
-If a page has no text (like scanned pages), it automatically runs OCR (with Tesseract) to convert images into text.
+###  What It Does
+- Reads a PDF file and prints the page count.
+- Extracts readable text using **PyMuPDF**.
+- If a page has no text (e.g., scanned pages), it automatically uses **Tesseract OCR** to extract text from images.
 
-Why I Made It
-Initial problem: Some PDFs had blank pages—text extraction failed.
+###  Why I Made It
+- **Problem**: Some PDFs had blank pages because text extraction failed.
+- **Solution**: Added an OCR fallback using Tesseract to ensure every page is processed.
+- **Tesseract Issue**: Couldn’t find language files due to installation path.
+- **Fix**: Set the `TESSDATA_PREFIX` environment variable to:
+  ```
+  C:\Program Files (x86)\tessdata
+  ```
 
-Solution: I added OCR fallback to ensure every page is processed.
+###  How It Works
+- Sorts extracted text for proper reading order.
+- Falls back to OCR only on pages that need it.
+- Cleans output to keep only letters, numbers, spaces, and basic punctuation.
+- Saves result as `.txt` file (e.g., `resume.pdf → resume.txt`).
+- Skips execution if the file isn’t a PDF.
 
-Tesseract issue: It couldn't find its language files because I installed it in C:\Program Files (x86)\tessdata.
+### How to Use
+1. **Install dependencies:**
+   ```bash
+   pip install PyMuPDF
+   ```
+2. **Install Tesseract OCR** (ensure `eng.traineddata` exists at the path above).
+3. **Edit** the `PDF_PATH` variable in `PdfParsing.py`.
+4. **Run:**
+   ```bash
+   python PdfParsing.py
+   ```
 
-Fix: I pointed the script to the correct folder by setting the environment variable before importing PyMuPDF.
-
- How It Works
-Sorts extracted text for proper reading order.
-
-Falls back to OCR only on pages needing it.
-
-Cleans the final output to keep only letters, numbers, spaces, and basic punctuation.
-
-Saves the result as a .txt file matching the PDF name (e.g., resume.pdf → resume.txt).
-
-Skips execution if the input file isn’t a PDF.
-
-To Use It
-Install dependencies:
-
-pip install PyMuPDF
-Install Tesseract OCR (make sure eng.traineddata is in C:\Program Files (x86)\tessdata).
-
-Edit the PDF_PATH variable in the script.
-
-Run:
-
-python PdfParsing.py
-You’ll get console output like:
-
+**Expected Output:**
+```
 Page count: 5
- Cleaned text saved to: EPAM_JD - Intern+FTE - 2026.txt
+Cleaned text saved to: EPAM_JD - Intern+FTE - 2026.txt
+```
 
+---
 
+## Day 4 — Text Parser with JSON Conversion
 
+###  Script: `Parser.py`
+Adds two key functions on top of `PdfParsing.py`:
 
+- `txt_to_json`: Converts plain text into a basic key-value JSON format.
+- `advanced_json_format`: Generates structured, section-wise JSON from the text.
 
-# Day4
---> Parser.py :It just has 2 added  fuctions(`txt_to_json`,`advanced_json_format`) to pdfParsing.py
-This script extracts text from a PDF, cleans it, and converts it into JSON using:
-- `txt_to_json`: Basic key-value conversion
-- `advanced_json_format`: Structured, section-wise JSON
+### How to Use
+1. Set your PDF path in the `PDF_PATH` variable.
+2. Run:
+   ```bash
+   python Parser.py
+   ```
 
-Set your PDF path in PDF_PATH.
-
-Run:
-python script.py
-
-
-Output:
-
-Cleaned .txt file
-
-Two JSON outputs printed:
-
-Basic key-value
-
-Advanced structured format
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+### 📤 Output
+- A cleaned `.txt` file.
+- Two JSON outputs printed to console:
+  - Basic key-value format
+  - Advanced structured format
