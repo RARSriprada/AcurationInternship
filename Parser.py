@@ -5,7 +5,7 @@ import re
 import pymupdf as fitz
 from pathlib import Path
 import json
-PDF_PATH = Path(r"C:/Users/venka/Downloads/2200031639_Resume.pdf")
+PDF_PATH = Path(r"")
 import json
 import re
 
