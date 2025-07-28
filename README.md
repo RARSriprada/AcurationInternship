@@ -7,7 +7,7 @@ This repository contains a suite of Python scripts that form a complete AI-power
 - **PDF Parsing:** Extracts and cleans text from PDF documents. It uses a robust approach that supports both native text extraction and Optical Character Recognition (OCR) for scanned PDFs.
 - **Web Scraping:** Fetches content from a specified URL, extracting and cleaning the main text paragraphs.
 - **Structured Output:** Saves all processed data and summaries into a single, organized `combined_output.json` file.
-- **Flattening Data:**In order to give the data to the llm,we need to convert the json format to a flattened string format as llm are trained on processing text not Structured Data.
+- **Flattening Data:** In order to give the data to the llm,we need to convert the json format to a flattened string format as llm are trained on processing text not Structured Data.
 - **AI-Powered Summarization:** Utilizes a pre-trained Hugging Face model (`distilbart-cnn-12-6`) to intelligently condense information from both the PDF and the website.
 - **Conversational Querying:** Acts as a bridge between the summarized data and the Google Gemini LLM, allowing users to ask natural language questions about the combined information.
 
