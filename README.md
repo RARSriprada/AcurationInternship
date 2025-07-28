@@ -58,9 +58,9 @@ from langchain_core.messages import HumanMessage
 #### HumanMessage from langchain_core.messages: A LangChain class used to format the user's input as a message for the model.
 
 ### Input Paths
-**File Path Input**
-**Web URL Input**
-**User Question Input**(In runtime)
+#### File Path Input
+#### Web URL Input
+#### User Question Input(In runtime)
 
 
 ### Prerequisites
@@ -70,30 +70,13 @@ from langchain_core.messages import HumanMessage
 
 ### Steps
 
-1.  **Clone the repository:**
-    ```sh
-    git clone [https://github.com/your-username/your-repo-name.git](https://github.com/your-username/your-repo-name.git)
-    cd your-repo-name
-    ```
 
-2.  **Set up a virtual environment (recommended):**
-    ```sh
-    python -m venv venv
-    source venv/bin/activate  # On Windows: venv\Scripts\activate
-    ```
-
-3.  **Install the required libraries:**
-    ```sh
-    pip install -r requirements.txt
-    ```
-    _Note: You will need to create a `requirements.txt` file from the imported libraries._
-
-4.  **Configure your API key:**
+1.  **Configure your API key:**
     Create a `.env` file in the project root and add your Google Gemini API key.
     ```
     GOOGLE_API_KEY="your_gemini_api_key_here"
     ```
-    Alternatively, the `query_agent.py` script will prompt you to enter the key if the environment variable is not set.
+    Alternatively, the `agent_pipeline.py` script will prompt you to enter the key if the environment variable is not set.
 
 ## Usage
 
@@ -108,17 +91,17 @@ Then give the question i.e.prompt to the model
 ## Output
 Initially  **combined_output.json** is generated after running the web_parser.py
 This JSON file is the initial output after running web_parser.py. It serves as the consolidated knowledge base, containing all the extracted and summarized information from both the web scraping and PDF parsing processes.
-**Purpose: To store the organized and summarized data in a machine-readable format for subsequent querying by the AI agent.**
+**Purpose:** To store the organized and summarized data in a machine-readable format for subsequent querying by the AI agent.
 Later an Ai generated output for **agent_pipeline.py**
 After combined_output.json is generated, agent_pipeline.py uses its content to answer user questions. The "AI-generated output" refers to the natural language response produced by the Large Language Model (Google Gemini) based on its analysis of the data contained within combined_output.json.
-**Purpose: To provide direct, conversational answers to user queries, leveraging the summarized information from both web and PDF sources.**
+**Purpose:** To provide direct, conversational answers to user queries, leveraging the summarized information from both web and PDF sources.
 
 
 ## Sample Input
-**web_parser.py:**
+#### web_parser.py:
 ->pdf path(Resume File)
 ->web path(Web Article)
-**agent_pipeline.py**
+#### agent_pipeline.p
 ->Can you tell me about the key points mentioned in the web article summary?
 
 ## Sample output
