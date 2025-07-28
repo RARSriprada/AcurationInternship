@@ -107,6 +107,7 @@ After combined_output.json is generated, agent_pipeline.py uses its content to a
 ## Sample output
 
 #### for web_parser.py
+```
 {
   "pdf_data": {
     "title": "Example Resume Title",
@@ -130,11 +131,12 @@ After combined_output.json is generated, agent_pipeline.py uses its content to a
     ]
   }
 }
-
+```
 #### for agent_pipeline.py
-
+```
 Enter your question based on the combined output: Can you tell me about the key points mentioned in the web article summary?
 
 Gemini Response:
 The web article summary discusses [AI-generated response detailing key points from the web summary in combined_output.json]. It particularly highlights [another point] and includes a link to https://www.quora.com/How-do-you-get-the-URL-of-specific-section-on-a-Wikipedia-page.
+```
 
