@@ -23,14 +23,14 @@ The project works in two main stages:
 ### Import Statements
 In WebParser.py
 ```
-**import os**
-**import re**
-**import json**
-**import requests**
-**from bs4 import BeautifulSoup**
-**from pathlib import Path**
-**import pymupdf as fitz**
-**from transformers import pipeline**
+import os
+import re
+import json
+import requests
+from bs4 import BeautifulSoup
+from pathlib import Path
+import pymupdf as fitz
+from transformers import pipeline
 ```
 
 #### os: For interacting with the operating system (though not heavily used in this version).
@@ -44,11 +44,11 @@ In WebParser.py
 
 In agent_pipeline.py
 ```
-**import json**
-**import os**
-**from dotenv import load_dotenv**
-**from langchain_google_genai import ChatGoogleGenerativeAI**
-**from langchain_core.messages import HumanMessage**
+import json
+import os
+from dotenv import load_dotenv
+from langchain_google_genai import ChatGoogleGenerativeAI
+from langchain_core.messages import HumanMessage
 ```
 
 #### json: For reading the combined_output.json file.
