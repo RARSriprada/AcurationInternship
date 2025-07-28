@@ -22,6 +22,7 @@ The project works in two main stages:
 ## Installation
 ### Import Statements
 In WebParser.py
+```
 **import os**
 **import re**
 **import json**
@@ -30,6 +31,7 @@ In WebParser.py
 **from pathlib import Path**
 **import pymupdf as fitz**
 **from transformers import pipeline**
+```
 
 #### os: For interacting with the operating system (though not heavily used in this version).
 #### re: The regular expression module for cleaning text.
@@ -41,11 +43,13 @@ In WebParser.py
 #### pipeline from transformers: The key library for loading and using the Hugging Face summarization model. 
 
 In agent_pipeline.py
+```
 **import json**
 **import os**
 **from dotenv import load_dotenv**
 **from langchain_google_genai import ChatGoogleGenerativeAI**
 **from langchain_core.messages import HumanMessage**
+```
 
 #### json: For reading the combined_output.json file.
 #### os: For interacting with the operating system, particularly to get the API key.
