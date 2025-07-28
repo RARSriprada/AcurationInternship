@@ -101,7 +101,7 @@ After combined_output.json is generated, agent_pipeline.py uses its content to a
 #### web_parser.py:
 ->pdf path(Resume File)
 ->web path(Web Article)
-#### agent_pipeline.p
+#### agent_pipeline.py:
 ->Can you tell me about the key points mentioned in the web article summary?
 
 ## Sample output
